@@ -1,0 +1,26 @@
+body,
+#displayHex {
+  transition: all 0.5s;
+}
+
+#displayHex {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 50px;
+  float: right;
+  text-align: right;
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#button {
+  font-size: 16px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  float: left;
+  text-align: left;
+}
