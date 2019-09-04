@@ -8,13 +8,59 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <input
-      id="button"
-      type="button"
-      value="Generate Color"
-      onclick="getColor()"
-    />
-    <div id="displayHex">#ffffff</div>
+    <div class="row" id="row">
+      <div class="column" id="color1">
+        <div class="controls">
+          <input
+            class="checkbox"
+            type="checkbox"
+            name="Lock1"
+            id="lock1"
+            value="Lock color"
+          />
+          <div class="hexDisplay" id="displayHex1">#ffffff</div>
+        </div>
+      </div>
+      <div class="column" id="color2">
+        <div class="controls">
+          <input class="checkbox" type="checkbox" name="Lock2" id="lock2" />
+          <div class="hexDisplay" id="displayHex2">#ffffff</div>
+        </div>
+      </div>
+      <div class="column" id="color3">
+        <div class="controls">
+          <input class="checkbox" type="checkbox" name="Lock3" id="lock3" />
+          <div class="hexDisplay" id="displayHex3">#ffffff</div>
+        </div>
+      </div>
+      <div class="column" id="color4">
+        <div class="controls">
+          <input class="checkbox" type="checkbox" name="Lock4" id="lock4" />
+          <div class="hexDisplay" id="displayHex4">#ffffff</div>
+        </div>
+      </div>
+      <div class="column" id="color5">
+        <div class="controls">
+          <input class="checkbox" type="checkbox" name="Lock5" id="lock5" />
+          <div class="hexDisplay" id="displayHex5">#ffffff</div>
+        </div>
+      </div>
+    </div>
+    <div id="bottomRow">
+      <p>
+        Click on the "Generate Color" button or press SPACEBAR to generate new
+        colors. You can lock one or more colors by clicking the "Lock Color"
+        item. If the page is refreshed, all colors are UNLOCKED and REGENERATED
+        AGAIN
+      </p>
+      <input
+        id="button"
+        type="button"
+        value="Generate Color"
+        onclick="getColor()"
+      />
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>

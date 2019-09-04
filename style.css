@@ -1,26 +1,83 @@
-body,
-#displayHex {
-  transition: all 0.5s;
+body {
+  padding: 0px;
+  margin: 0 auto;
 }
 
-#displayHex {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px 50px;
-  float: right;
-  text-align: right;
-  font-family: "Open Sans", sans-serif;
-  font-size: 32px;
-  color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.5);
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 95vh;
+  flex: 1;
+  align-content: flex-end;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-content: space-between;
+  height: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 50px;
+  justify-content: space-between;
+  align-content: center;
+  box-sizing: border-box;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+.checkbox,
+.hexDisplay {
+  display: inline-flex;
+}
+
+.checkbox {
+  width: 150px;
+}
+.checkbox::after {
+  content: "Lock color";
+  color: #fff;
+}
+
+#displayHex1,
+#displayHex2,
+#displayHex3,
+#displayHex4,
+#displayHex5,
+.hexDisplay,
+.column {
+  color: #fff;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+}
+
+#bottomRow {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
 }
 
 #button {
-  font-size: 16px;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  float: left;
-  text-align: left;
+  box-sizing: border-box;
 }
