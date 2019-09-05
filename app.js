@@ -37,68 +37,63 @@ function generateColor() {
     color1 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column1.setAttribute("style", `background-color:#` + `${color1}`);
-    hex1.innerHTML = `#` + `${color1}`;
-
-    padlock1.classList.remove("dark");
   } else {
     // do nothing
-    padlock1.classList.add("dark");
   }
 
   if (check2.checked != true) {
     color2 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column2.setAttribute("style", `background-color:#` + `${color2}`);
-    hex2.innerHTML = `#` + `${color2}`;
-    padlock2.classList.remove("dark");
   } else {
     //do nothing...
-
-    padlock2.classList.add("dark");
   }
 
   if (check3.checked != true) {
     color3 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column3.setAttribute("style", `background-color:#` + `${color3}`);
-    hex3.innerHTML = `#` + `${color3}`;
-    padlock3.classList.remove("dark");
   } else {
     //do nothing...
-
-    padlock3.classList.add("dark");
   }
 
   if (check4.checked != true) {
     color4 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column4.setAttribute("style", `background-color:#` + `${color4}`);
-    hex4.innerHTML = `#` + `${color4}`;
-    padlock4.classList.remove("dark");
   } else {
     //do nothing
-    padlock4.classList.add("dark");
   }
 
   if (check5.checked != true) {
     color5 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column5.setAttribute("style", `background-color:#` + `${color5}`);
-    hex5.innerHTML = `#` + `${color5}`;
-    padlock5.classList.remove("dark");
   } else {
     // do nothing..
-
-    padlock5.classList.add("dark");
   }
+  changePadlock();
+  applyColors();
 }
 
-function checkPadlock() {
+function applyColors() {
+  column1.setAttribute("style", `background-color:#` + `${color1}`);
+  hex1.innerHTML = `#` + `${color1}`;
+
+  column2.setAttribute("style", `background-color:#` + `${color2}`);
+  hex2.innerHTML = `#` + `${color2}`;
+
+  column3.setAttribute("style", `background-color:#` + `${color3}`);
+  hex3.innerHTML = `#` + `${color3}`;
+
+  column4.setAttribute("style", `background-color:#` + `${color4}`);
+  hex4.innerHTML = `#` + `${color4}`;
+
+  column5.setAttribute("style", `background-color:#` + `${color5}`);
+  hex5.innerHTML = `#` + `${color5}`;
+}
+
+function changePadlock() {
   if (check1.checked != true) {
     padlock1.classList.remove("dark");
   } else {
@@ -160,12 +155,16 @@ document.body.onkeyup = function(e) {
 const colors = window.location.search.slice(8).split("-");
 
 window.onload = function() {
-  color1 = colors[0];
-  color2 = colors[1];
-  color3 = colors[2];
-  color4 = colors[3];
-  color5 = colors[4];
+  if (window.location.search === true) {
+    color1 = colors[0];
+    color2 = colors[1];
+    color3 = colors[2];
+    color4 = colors[3];
+    color5 = colors[4];
 
-  generateColor();
-  changeURL();
+    applyColors();
+    changeURL();
+  } else {
+    generate();
+  }
 };
