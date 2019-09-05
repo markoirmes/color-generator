@@ -157,22 +157,7 @@ document.body.onkeyup = function(e) {
   }
 };
 
-const colors = window.location.search.slice(7);
+const colors = window.location.search.slice(7).split("-");
+
 console.log(colors);
 window.onload = generate;
-/*
-window.onload = function() {
-  if (linkText.length > 16) {
-    color1 = linkText.slice(17, 23);
-    color2 = linkText.slice(24, 30);
-    color3 = linkText.slice(31, 37);
-    color4 = linkText.slice(38, 44);
-    color5 = linkText.slice(45, 51);
-    generate();
-    changeURL();
-  } else {
-    generate();
-    changeURL();
-  }
-};
-*/
