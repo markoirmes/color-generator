@@ -88,6 +88,11 @@ function changeURL() {
   );
 }
 
+function generate() {
+  generateColor();
+  changeURL();
+}
+
 // Generate colors using SPACEBAR
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
@@ -95,6 +100,8 @@ document.body.onkeyup = function(e) {
     changeURL();
   }
 };
+
+window.onload = generate;
 
 /* 
 window.onload = function() {
