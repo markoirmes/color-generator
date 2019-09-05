@@ -99,7 +99,7 @@ document.body.onkeyup = function(e) {
   }
 };
 // const linkText = window.location.pathname;
-//window.onload = generate;
+window.onload = generate;
 
 /*
 window.onload = function() {
