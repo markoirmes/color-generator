@@ -24,9 +24,7 @@ const hex5 = document.getElementById("displayHex5");
 const column5 = document.getElementById("color5");
 const check5 = document.getElementById("lock5");
 
-/* function grabItems() {
-  
-} */
+const url = window.location.href;
 
 function changeColorOne() {
   column1.setAttribute("style", `background-color:#` + `${color1}`);
@@ -117,13 +115,11 @@ function changeURL() {
 }
 
 function standardColorGenerate() {
-  grabItems();
   generateColor();
   changeURL();
 }
 
 function pasteColor() {
-  const url = window.location.href;
   if (
     url != "https://markoirmes.github.io/color-generator" ||
     url != "https://markoirmes.github.io/color-generator/"
@@ -134,7 +130,6 @@ function pasteColor() {
     color4 = url.slice(65, 71);
     color5 = url.slice(72, 79);
 
-    grabItems();
     changeColors();
     changeURL();
   } else {
