@@ -59,44 +59,28 @@ function generateColor() {
       .toString(16)
       .slice(2, 8);
     changeColorOne();
-  } else {
-    // do nothing...
-  }
-
-  if (check2.checked != true) {
+  } else if (check2.checked != true) {
     color2 = Math.random()
       .toString(16)
       .slice(2, 8);
     changeColorTwo();
-  } else {
-    //do nothing...
-  }
-
-  if (check3.checked != true) {
+  } else if (check3.checked != true) {
     color3 = Math.random()
       .toString(16)
       .slice(2, 8);
     changeColorThree();
-  } else {
-    //do nothing...
-  }
-
-  if (check4.checked != true) {
+  } else if (check4.checked != true) {
     color4 = Math.random()
       .toString(16)
       .slice(2, 8);
     changeColorFour();
-  } else {
-    // do nothing...
-  }
-
-  if (check5.checked != true) {
+  } else if (check5.checked != true) {
     color5 = Math.random()
       .toString(16)
       .slice(2, 8);
     changeColorFive();
   } else {
-    //do nothing...
+    // do nothing...
   }
 }
 
