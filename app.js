@@ -37,12 +37,10 @@ function getColor() {
   }
 
   if (check2.checked != true) {
-    color2 =
-      "#" +
-      Math.random()
-        .toString(16)
-        .slice(2, 8);
-    column2.setAttribute("style", `background-color:${color2}`);
+    color2 = Math.random()
+      .toString(16)
+      .slice(2, 8);
+    column2.setAttribute("style", `background-color:#` + `${color2}`);
     hex2.innerHTML = `${color2}`;
   } else {
     //do nothing...
