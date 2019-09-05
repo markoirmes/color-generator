@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-family: "Open Sans", sans-serif;
 }
 .row {
   display: flex;
@@ -44,6 +45,15 @@ body {
   transition: all 0.5s ease;
 }
 
+.hexDisplay {
+  background-color: #000;
+  font-size: 30px;
+  opacity: 0.5;
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+}
+
 #bottomRow {
   background-color: black;
   color: white;
@@ -64,4 +74,25 @@ body {
 
 #bottomRow input {
   display: inline-flex;
+}
+
+.padlock {
+  width: 50px;
+  height: auto;
+  opacity: 0.5;
+}
+
+.dark {
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type="checkbox"] + img {
+  cursor: pointer;
 }
