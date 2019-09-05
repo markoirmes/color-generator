@@ -149,4 +149,4 @@ document.body.onkeyup = function(e) {
     standardColorGenerate();
   }
 };
-window.onload = pasteColor;
+window.onload = standardColorGenerate;
