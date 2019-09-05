@@ -32,7 +32,7 @@ function generateColor() {
       .slice(2, 8);
     column1.setAttribute("style", `background-color:#` + `${color1}`);
     hex1.innerHTML = `#` + `${color1}`;
-  } else { 
+  } else {
     // do nothing
   }
 
@@ -42,7 +42,7 @@ function generateColor() {
       .slice(2, 8);
     column2.setAttribute("style", `background-color:#` + `${color2}`);
     hex2.innerHTML = `#` + `${color2}`;
-  } else { 
+  } else {
     //do nothing...
   }
 
@@ -52,10 +52,9 @@ function generateColor() {
       .slice(2, 8);
     column3.setAttribute("style", `background-color:#` + `${color3}`);
     hex3.innerHTML = `#` + `${color3}`;
-  } else { 
+  } else {
     //do nothing...
   }
-
 
   if (check4.checked != true) {
     color4 = Math.random()
@@ -63,7 +62,7 @@ function generateColor() {
       .slice(2, 8);
     column4.setAttribute("style", `background-color:#` + `${color4}`);
     hex4.innerHTML = `#` + `${color4}`;
-  } else { 
+  } else {
     //do nothing
   }
 
@@ -76,6 +75,7 @@ function generateColor() {
   } else {
     // do nothing...
   }
+}
 
 // Change URL based on generated colors
 function changeURL() {
@@ -93,4 +93,4 @@ document.body.onkeyup = function(e) {
   }
 };
 
-  window.onload = generateColor;
+window.onload = generateColor;
