@@ -1,8 +1,8 @@
-let color1;
-let color2;
-let color3;
-let color4;
-let color5;
+let color1 = "#ffffff";
+let color2 = "#ffffff";
+let color3 = "#ffffff";
+let color4 = "#ffffff";
+let color5 = "#ffffff";
 
 const hex1 = document.getElementById("displayHex1");
 const column1 = document.getElementById("color1");
@@ -24,8 +24,9 @@ const hex5 = document.getElementById("displayHex5");
 const column5 = document.getElementById("color5");
 const check5 = document.getElementById("lock5");
 
-const url = window.location.href;
+const url = window.location.href; //Check what is the URL of the page
 
+// Change background color and display HEX code
 function changeColorOne() {
   column1.setAttribute("style", `background-color:#` + `${color1}`);
   hex1.innerHTML = `#` + `${color1}`;
@@ -51,14 +52,7 @@ function changeColorFive() {
   hex5.innerHTML = `#` + `${color5}`;
 }
 
-function changeColors() {
-  changeColorOne();
-  changeColorTwo();
-  changeColorThree();
-  changeColorFour();
-  changeColorFive();
-}
-
+// This checks for locked colors and generates new ones
 function generateColor() {
   if (check1.checked != true) {
     color1 = Math.random()
@@ -106,6 +100,16 @@ function generateColor() {
   }
 }
 
+// Grouped function to check and generate all colors
+function changeColors() {
+  changeColorOne();
+  changeColorTwo();
+  changeColorThree();
+  changeColorFour();
+  changeColorFive();
+}
+
+// Change URL based on generated colors
 function changeURL() {
   window.history.pushState(
     "object or string",
@@ -114,11 +118,14 @@ function changeURL() {
   );
 }
 
+// Standard function
 function standardColorGenerate() {
   generateColor();
   changeURL();
 }
 
+// Function that applies when pasting the link with color codes already in it
+/* 
 function pasteColor() {
   if (
     url != "https://markoirmes.github.io/color-generator" ||
@@ -135,11 +142,11 @@ function pasteColor() {
   } else {
     standardColorGenerate();
   }
-}
+} */
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
     standardColorGenerate();
   }
 };
-window.onload = pasteColor;
+window.onload = standardColorGenerate;
