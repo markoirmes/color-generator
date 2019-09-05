@@ -109,6 +109,12 @@ function changeColors() {
   changeColorFive();
 }
 
+// Standard function
+function standardColorGenerate() {
+  generateColor();
+  changeURL();
+}
+
 // Change URL based on generated colors
 function changeURL() {
   window.history.pushState(
@@ -116,12 +122,6 @@ function changeURL() {
     "Page Title",
     `/color-generator/${color1}-${color2}-${color3}-${color4}-${color5}`
   );
-}
-
-// Standard function
-function standardColorGenerate() {
-  generateColor();
-  changeURL();
 }
 
 // Function that applies when pasting the link with color codes already in it
