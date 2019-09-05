@@ -157,7 +157,7 @@ document.body.onkeyup = function(e) {
   }
 };
 
-const colors = window.location.search.slice(7).split("-");
+const colors = window.location.search.slice(8).split("-");
 
 console.log(colors);
 window.onload = generate;
