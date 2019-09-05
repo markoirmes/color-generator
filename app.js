@@ -98,22 +98,20 @@ document.body.onkeyup = function(e) {
     changeURL();
   }
 };
-const linkText = window.location.href;
-window.onload = generate;
+const linkText = window.location.pathname;
+// window.onload = generate;
 
-/* 
 window.onload = function() {
-  if (linkText.length > 60) {
-    color1 = linkText.slice(44, 50);
-    color2 = linkText.slice(51, 57);
-    color3 = linkText.slice(58, 64);
-    color4 = linkText.slice(65, 71);
-    color5 = linkText.slice(72, 79);
-    generateColor();
+  if (linkText.length > 16) {
+    color1 = linkText.slice(17, 23);
+    color2 = linkText.slice(24, 30);
+    color3 = linkText.slice(31, 37);
+    color4 = linkText.slice(38, 44);
+    color5 = linkText.slice(45, 51);
+    generate();
     changeURL();
   } else {
-    generateColor();
+    generate();
     changeURL();
   }
 };
-*/
