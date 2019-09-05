@@ -98,9 +98,10 @@ document.body.onkeyup = function(e) {
     changeURL();
   }
 };
-const linkText = window.location.pathname;
-// window.onload = generate;
+// const linkText = window.location.pathname;
+//window.onload = generate;
 
+/*
 window.onload = function() {
   if (linkText.length > 16) {
     color1 = linkText.slice(17, 23);
@@ -115,3 +116,4 @@ window.onload = function() {
     changeURL();
   }
 };
+*/
