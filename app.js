@@ -92,3 +92,5 @@ document.body.onkeyup = function(e) {
     changeURL();
   }
 };
+
+  window.onload = generateColor;
