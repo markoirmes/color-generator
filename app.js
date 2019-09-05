@@ -157,9 +157,10 @@ document.body.onkeyup = function(e) {
   }
 };
 
-const linkText = window.location.pathname;
+const colors = window.location.search;
+console.log(colors);
 window.onload = generate;
-
+/*
 window.onload = function() {
   if (linkText.length > 16) {
     color1 = linkText.slice(17, 23);
@@ -174,3 +175,4 @@ window.onload = function() {
     changeURL();
   }
 };
+*/
