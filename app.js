@@ -4,27 +4,29 @@ let color3;
 let color4;
 let color5;
 
-function grabItems() {
-  const hex1 = document.getElementById("displayHex1");
-  const column1 = document.getElementById("color1");
-  const check1 = document.getElementById("lock1");
+const hex1 = document.getElementById("displayHex1");
+const column1 = document.getElementById("color1");
+const check1 = document.getElementById("lock1");
 
-  const hex2 = document.getElementById("displayHex2");
-  const column2 = document.getElementById("color2");
-  const check2 = document.getElementById("lock2");
+const hex2 = document.getElementById("displayHex2");
+const column2 = document.getElementById("color2");
+const check2 = document.getElementById("lock2");
 
-  const hex3 = document.getElementById("displayHex3");
-  const column3 = document.getElementById("color3");
-  const check3 = document.getElementById("lock3");
+const hex3 = document.getElementById("displayHex3");
+const column3 = document.getElementById("color3");
+const check3 = document.getElementById("lock3");
 
-  const hex4 = document.getElementById("displayHex4");
-  const column4 = document.getElementById("color4");
-  const check4 = document.getElementById("lock4");
+const hex4 = document.getElementById("displayHex4");
+const column4 = document.getElementById("color4");
+const check4 = document.getElementById("lock4");
 
-  const hex5 = document.getElementById("displayHex5");
-  const column5 = document.getElementById("color5");
-  const check5 = document.getElementById("lock5");
-}
+const hex5 = document.getElementById("displayHex5");
+const column5 = document.getElementById("color5");
+const check5 = document.getElementById("lock5");
+
+/* function grabItems() {
+  
+} */
 
 function changeColorOne() {
   column1.setAttribute("style", `background-color:#` + `${color1}`);
