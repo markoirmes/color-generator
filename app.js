@@ -155,13 +155,12 @@ document.body.onkeyup = function(e) {
 const colors = window.location.search.slice(8).split("-");
 
 window.onload = function() {
-  if (colors.length) {
+  if (colors.length === 5) {
     color1 = colors[0];
     color2 = colors[1];
     color3 = colors[2];
     color4 = colors[3];
     color5 = colors[4];
-    alert("Pera");
     applyColors();
   } else {
     generate();
