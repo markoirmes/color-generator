@@ -26,7 +26,7 @@ const check5 = document.getElementById("lock5");
 
 const linkText = window.location.href;
 
-// This checks for locked colors and generates new ones
+// This checks for locked colors and generates new available ones
 function generateColor() {
   if (check1.checked != true) {
     color1 = Math.random()
@@ -88,6 +88,7 @@ function changeURL() {
   );
 }
 
+// Generate colors using SPACEBAR
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
     generateColor();
@@ -95,6 +96,7 @@ document.body.onkeyup = function(e) {
   }
 };
 
+/* 
 window.onload = function() {
   if (linkText.length > 60) {
     color1 = linkText.slice(44, 50);
@@ -109,3 +111,4 @@ window.onload = function() {
     changeURL();
   }
 };
+*/
