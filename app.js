@@ -125,7 +125,7 @@ function standardColorGenerate() {
 }
 
 // Function that applies when pasting the link with color codes already in it
-/* 
+
 function pasteColor() {
   if (
     url != "https://markoirmes.github.io/color-generator" ||
@@ -142,11 +142,11 @@ function pasteColor() {
   } else {
     standardColorGenerate();
   }
-} */
+}
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
     standardColorGenerate();
   }
 };
-window.onload = standardColorGenerate;
+window.onload = pasteColor;
