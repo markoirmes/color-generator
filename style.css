@@ -1,17 +1,16 @@
 body {
+  margin: 0px;
   padding: 0px;
-  margin: 0 auto;
 }
-
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: stretch;
-  height: 95vh;
+  flex-basis: 100%;
   flex: 1;
-  align-content: flex-end;
-  box-sizing: border-box;
+  height: 95vh;
+  padding: 0px;
+  margin: 0px;
 }
 
 .column {
@@ -19,33 +18,18 @@ body {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  align-content: space-between;
-  height: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 .controls {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 50px;
-  justify-content: space-between;
-  align-content: center;
-  box-sizing: border-box;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  padding: 0px 10px;
-  box-sizing: border-box;
 }
 
 .checkbox,
 .hexDisplay {
-  display: inline-flex;
 }
 
 .checkbox {
-  width: 150px;
 }
 .checkbox::after {
   content: "Lock color";
@@ -61,23 +45,24 @@ body {
 .column {
   color: #fff;
   transition: all 0.5s ease;
-  box-sizing: border-box;
 }
 
 #bottomRow {
+  background-color: black;
+  color: white;
+  height: 5vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
-  flex-wrap: wrap;
   flex: 1;
-  align-content: center;
-  justify-content: center;
-  height: 100%;
-  background-color: black;
-  color: white;
-  box-sizing: border-box;
+  justify-content: space-between;
 }
 
-#button {
-  box-sizing: border-box;
+#bottomRow p {
+  display: inline-flex;
+}
+
+#bottomRow input {
+  display: inline-flex;
 }
