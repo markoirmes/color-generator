@@ -161,9 +161,8 @@ window.onload = function() {
     color3 = colors[2];
     color4 = colors[3];
     color5 = colors[4];
-
+    alert("Pera");
     applyColors();
-    changeURL();
   } else {
     generate();
   }
