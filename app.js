@@ -155,7 +155,7 @@ document.body.onkeyup = function(e) {
 const colors = window.location.search.slice(8).split("-");
 
 window.onload = function() {
-  if (window.location.search === true) {
+  if (window.location.search == true) {
     color1 = colors[0];
     color2 = colors[1];
     color3 = colors[2];
