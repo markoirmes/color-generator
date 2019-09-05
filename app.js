@@ -98,6 +98,43 @@ function generateColor() {
   }
 }
 
+function checkPadlock() {
+  if (check1.checked != true) {
+    padlock1.classList.remove("dark");
+  } else {
+    // do nothing
+    padlock1.classList.add("dark");
+  }
+
+  if (check2.checked != true) {
+    padlock2.classList.remove("dark");
+  } else {
+    //do nothing...
+    padlock2.classList.add("dark");
+  }
+
+  if (check3.checked != true) {
+    padlock3.classList.remove("dark");
+  } else {
+    //do nothing...
+    padlock3.classList.add("dark");
+  }
+
+  if (check4.checked != true) {
+    padlock4.classList.remove("dark");
+  } else {
+    //do nothing
+    padlock4.classList.add("dark");
+  }
+
+  if (check5.checked != true) {
+    padlock5.classList.remove("dark");
+  } else {
+    // do nothing..
+    padlock5.classList.add("dark");
+  }
+}
+
 // Change URL based on generated colors
 function changeURL() {
   window.history.pushState(
