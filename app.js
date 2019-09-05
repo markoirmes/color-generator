@@ -26,77 +26,41 @@ const check5 = document.getElementById("lock5");
 
 const url = window.location.href; //Check what is the URL of the page
 
-// Change background color and display HEX code
-function changeColorOne() {
-  column1.setAttribute("style", `background-color:#` + `${color1}`);
-  hex1.innerHTML = `#` + `${color1}`;
-}
-
-function changeColorTwo() {
-  column2.setAttribute("style", `background-color:#` + `${color2}`);
-  hex2.innerHTML = `#` + `${color2}`;
-}
-
-function changeColorThree() {
-  column3.setAttribute("style", `background-color:#` + `${color3}`);
-  hex3.innerHTML = `#` + `${color3}`;
-}
-
-function changeColorFour() {
-  column4.setAttribute("style", `background-color:#` + `${color4}`);
-  hex4.innerHTML = `#` + `${color4}`;
-}
-
-function changeColorFive() {
-  column5.setAttribute("style", `background-color:#` + `${color5}`);
-  hex5.innerHTML = `#` + `${color5}`;
-}
-
 // This checks for locked colors and generates new ones
 function generateColor() {
   if (check1.checked != true) {
     color1 = Math.random()
       .toString(16)
       .slice(2, 8);
-    changeColorOne();
+    column1.setAttribute("style", `background-color:#` + `${color1}`);
+    hex1.innerHTML = `#` + `${color1}`;
   } else if (check2.checked != true) {
     color2 = Math.random()
       .toString(16)
       .slice(2, 8);
-    changeColorTwo();
+    column2.setAttribute("style", `background-color:#` + `${color2}`);
+    hex2.innerHTML = `#` + `${color2}`;
   } else if (check3.checked != true) {
     color3 = Math.random()
       .toString(16)
       .slice(2, 8);
-    changeColorThree();
+    column3.setAttribute("style", `background-color:#` + `${color3}`);
+    hex3.innerHTML = `#` + `${color3}`;
   } else if (check4.checked != true) {
     color4 = Math.random()
       .toString(16)
       .slice(2, 8);
-    changeColorFour();
+    column4.setAttribute("style", `background-color:#` + `${color4}`);
+    hex4.innerHTML = `#` + `${color4}`;
   } else if (check5.checked != true) {
     color5 = Math.random()
       .toString(16)
       .slice(2, 8);
-    changeColorFive();
+    column5.setAttribute("style", `background-color:#` + `${color5}`);
+    hex5.innerHTML = `#` + `${color5}`;
   } else {
     // do nothing...
   }
-}
-
-// Grouped function to check and generate all colors
-function changeColors() {
-  changeColorOne();
-  changeColorTwo();
-  changeColorThree();
-  changeColorFour();
-  changeColorFive();
-}
-
-// Standard function
-function standardColorGenerate() {
-  generateColor();
-  changeURL();
 }
 
 // Change URL based on generated colors
@@ -130,7 +94,7 @@ function changeURL() {
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
-    standardColorGenerate();
+    generateColor();
+    changeURL();
   }
 };
-window.onload = standardColorGenerate;
