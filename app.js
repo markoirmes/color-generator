@@ -83,6 +83,12 @@ function getColor() {
   } else {
     //do nothing...
   }
+
+  window.history.pushState(
+    "object or string",
+    "Page Title",
+    `/${color1}-${color2}-${color3}-${color4}-${color5}`
+  );
 }
 
 document.body.onkeyup = function(e) {

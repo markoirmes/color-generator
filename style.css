@@ -20,20 +20,17 @@ body {
   flex: 1;
   padding: 0px;
   margin: 0px;
+  align-content: flex-end;
+  justify-content: flex-end;
 }
 
 .controls {
-}
-
-.checkbox,
-.hexDisplay {
-}
-
-.checkbox {
-}
-.checkbox::after {
-  content: "Lock color";
-  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 5px 20px;
 }
 
 #displayHex1,
