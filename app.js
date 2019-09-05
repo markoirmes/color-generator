@@ -157,7 +157,7 @@ document.body.onkeyup = function(e) {
   }
 };
 
-const colors = window.location.search;
+const colors = window.location.search.slice(7);
 console.log(colors);
 window.onload = generate;
 /*
