@@ -17,11 +17,11 @@
               type="checkbox"
               name="Lock1"
               id="lock1"
+              onchange="checkPadlock()"
               value="Lock color"/><img
               id="padlock1"
               class="padlock"
               src="./images/lock.png"
-              onclick="checkPadlock()"
           /></label>
           <div class="hexDisplay" id="displayHex1">#ffffff</div>
         </div>
@@ -29,7 +29,13 @@
       <div class="column" id="color2">
         <div class="controls">
           <label for="lock2">
-            <input class="checkbox" type="checkbox" name="lock2" id="lock2"/>
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="lock2"
+              id="lock2"
+              onchange="checkPadlock()"
+              value="Lock color"/>
             <img id="padlock2" class="padlock" src="./images/lock.png"
           /></label>
           <div class="hexDisplay" id="displayHex2">#ffffff</div>
@@ -42,11 +48,11 @@
               class="checkbox"
               type="checkbox"
               name="Lock3"
+              onchange="checkPadlock()"
               id="lock3"/><img
               id="padlock3"
               class="padlock"
               src="./images/lock.png"
-              onchange="checkPadlock()"
           /></label>
           <div class="hexDisplay" id="displayHex3">#ffffff</div>
         </div>
@@ -58,11 +64,11 @@
               class="checkbox"
               type="checkbox"
               name="Lock4"
+              onchange="checkPadlock()"
               id="lock4"/><img
               id="padlock4"
               class="padlock"
               src="./images/lock.png"
-              onchange="checkPadlock()"
           /></label>
           <div class="hexDisplay" id="displayHex4">#ffffff</div>
         </div>
@@ -74,6 +80,7 @@
               class="checkbox"
               type="checkbox"
               name="Lock5"
+              onchange="checkPadlock()"
               id="lock5"/><img
               id="padlock5"
               class="padlock"
