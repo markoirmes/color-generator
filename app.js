@@ -4,7 +4,7 @@ let color3;
 let color4;
 let color5;
 
-function getColor() {
+function grabItems() {
   const hex1 = document.getElementById("displayHex1");
   const column1 = document.getElementById("color1");
   const check1 = document.getElementById("lock1");
@@ -24,13 +24,47 @@ function getColor() {
   const hex5 = document.getElementById("displayHex5");
   const column5 = document.getElementById("color5");
   const check5 = document.getElementById("lock5");
+}
 
+function changeColorOne() {
+  column1.setAttribute("style", `background-color:#` + `${color1}`);
+  hex1.innerHTML = `#` + `${color1}`;
+}
+
+function changeColorTwo() {
+  column2.setAttribute("style", `background-color:#` + `${color2}`);
+  hex2.innerHTML = `#` + `${color2}`;
+}
+
+function changeColorThree() {
+  column3.setAttribute("style", `background-color:#` + `${color3}`);
+  hex3.innerHTML = `#` + `${color3}`;
+}
+
+function changeColorFour() {
+  column4.setAttribute("style", `background-color:#` + `${color4}`);
+  hex4.innerHTML = `#` + `${color4}`;
+}
+
+function changeColorFive() {
+  column5.setAttribute("style", `background-color:#` + `${color5}`);
+  hex5.innerHTML = `#` + `${color5}`;
+}
+
+function changeColors() {
+  changeColorOne();
+  changeColorTwo();
+  changeColorThree();
+  changeColorFour();
+  changeColorFive();
+}
+
+function generateColor() {
   if (check1.checked != true) {
     color1 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column1.setAttribute("style", `background-color:#` + `${color1}`);
-    hex1.innerHTML = `#` + `${color1}`;
+    changeColorOne();
   } else {
     // do nothing...
   }
@@ -39,8 +73,7 @@ function getColor() {
     color2 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column2.setAttribute("style", `background-color:#` + `${color2}`);
-    hex2.innerHTML = `#` + `${color2}`;
+    changeColorTwo();
   } else {
     //do nothing...
   }
@@ -49,8 +82,7 @@ function getColor() {
     color3 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column3.setAttribute("style", `background-color:#` + `${color3}`);
-    hex3.innerHTML = `#` + `${color3}`;
+    changeColorThree();
   } else {
     //do nothing...
   }
@@ -59,8 +91,7 @@ function getColor() {
     color4 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column4.setAttribute("style", `background-color:#` + `${color4}`);
-    hex4.innerHTML = `#` + `${color4}`;
+    changeColorFour();
   } else {
     // do nothing...
   }
@@ -69,23 +100,49 @@ function getColor() {
     color5 = Math.random()
       .toString(16)
       .slice(2, 8);
-    column5.setAttribute("style", `background-color:#` + `${color5}`);
-    hex5.innerHTML = `#` + `${color5}`;
+    changeColorFive();
   } else {
     //do nothing...
   }
+}
 
+function changeURL() {
   window.history.pushState(
     "object or string",
     "Page Title",
-    `/${color1}-${color2}-${color3}-${color4}-${color5}`
+    `/color-generator/${color1}-${color2}-${color3}-${color4}-${color5}`
   );
+}
+
+function standardColorGenerate() {
+  grabItems();
+  generateColor();
+  changeURL();
+}
+
+function pasteColor() {
+  const url = window.location.href;
+  if (
+    url != "https://markoirmes.github.io/color-generator" ||
+    url != "https://markoirmes.github.io/color-generator/"
+  ) {
+    color1 = url.slice(44, 50);
+    color2 = url.slice(51, 57);
+    color3 = url.slice(58, 64);
+    color4 = url.slice(65, 71);
+    color5 = url.slice(72, 79);
+
+    grabItems();
+    changeColors();
+    changeURL();
+  } else {
+    standardColorGenerate();
+  }
 }
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
-    getColor();
+    standardColorGenerate();
   }
 };
-
-window.onload = getColor;
+window.onload = pasteColor;
