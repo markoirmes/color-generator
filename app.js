@@ -24,6 +24,8 @@ const hex5 = document.getElementById("displayHex5");
 const column5 = document.getElementById("color5");
 const check5 = document.getElementById("lock5");
 
+const linkText = window.location.href;
+
 // This checks for locked colors and generates new ones
 function generateColor() {
   if (check1.checked != true) {
@@ -93,4 +95,17 @@ document.body.onkeyup = function(e) {
   }
 };
 
-window.onload = generateColor;
+window.onload = function() {
+  if (linkText.length > 60) {
+    color1 = linkText.slice(44, 50);
+    color2 = linkText.slice(51, 57);
+    color3 = linkText.slice(58, 64);
+    color4 = linkText.slice(65, 71);
+    color5 = linkText.slice(72, 79);
+    generateColor();
+    changeURL();
+  } else {
+    generateColor();
+    changeURL();
+  }
+};
