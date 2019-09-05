@@ -1,37 +1,36 @@
+let color1;
+let color2;
+let color3;
+let color4;
+let color5;
+
 function getColor() {
-  let color1 = "#ffffff";
   const hex1 = document.getElementById("displayHex1");
   const column1 = document.getElementById("color1");
   const check1 = document.getElementById("lock1");
 
-  let color2 = "#ffffff";
   const hex2 = document.getElementById("displayHex2");
   const column2 = document.getElementById("color2");
   const check2 = document.getElementById("lock2");
 
-  let color3 = "#ffffff";
   const hex3 = document.getElementById("displayHex3");
   const column3 = document.getElementById("color3");
   const check3 = document.getElementById("lock3");
 
-  let color4 = "#ffffff";
   const hex4 = document.getElementById("displayHex4");
   const column4 = document.getElementById("color4");
   const check4 = document.getElementById("lock4");
 
-  let color5 = "#ffffff";
   const hex5 = document.getElementById("displayHex5");
   const column5 = document.getElementById("color5");
   const check5 = document.getElementById("lock5");
 
   if (check1.checked != true) {
-    color1 =
-      "#" +
-      Math.random()
-        .toString(16)
-        .slice(2, 8);
-    column1.setAttribute("style", `background-color:${color1}`);
-    hex1.innerHTML = `${color1}`;
+    color1 = Math.random()
+      .toString(16)
+      .slice(2, 8);
+    column1.setAttribute("style", `background-color:#` + `${color1}`);
+    hex1.innerHTML = `#` + `${color1}`;
   } else {
     // do nothing...
   }
@@ -41,43 +40,37 @@ function getColor() {
       .toString(16)
       .slice(2, 8);
     column2.setAttribute("style", `background-color:#` + `${color2}`);
-    hex2.innerHTML = `${color2}`;
+    hex2.innerHTML = `#` + `${color2}`;
   } else {
     //do nothing...
   }
 
   if (check3.checked != true) {
-    color3 =
-      "#" +
-      Math.random()
-        .toString(16)
-        .slice(2, 8);
-    column3.setAttribute("style", `background-color:${color3}`);
-    hex3.innerHTML = `${color3}`;
+    color3 = Math.random()
+      .toString(16)
+      .slice(2, 8);
+    column3.setAttribute("style", `background-color:#` + `${color3}`);
+    hex3.innerHTML = `#` + `${color3}`;
   } else {
     //do nothing...
   }
 
   if (check4.checked != true) {
-    color4 =
-      "#" +
-      Math.random()
-        .toString(16)
-        .slice(2, 8);
-    column4.setAttribute("style", `background-color:${color4}`);
-    hex4.innerHTML = `${color4}`;
+    color4 = Math.random()
+      .toString(16)
+      .slice(2, 8);
+    column4.setAttribute("style", `background-color:#` + `${color4}`);
+    hex4.innerHTML = `#` + `${color4}`;
   } else {
     // do nothing...
   }
 
   if (check5.checked != true) {
-    color5 =
-      "#" +
-      Math.random()
-        .toString(16)
-        .slice(2, 8);
-    column5.setAttribute("style", `background-color:${color5}`);
-    hex5.innerHTML = `${color5}`;
+    color5 = Math.random()
+      .toString(16)
+      .slice(2, 8);
+    column5.setAttribute("style", `background-color:#` + `${color5}`);
+    hex5.innerHTML = `#` + `${color5}`;
   } else {
     //do nothing...
   }
