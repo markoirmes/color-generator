@@ -159,5 +159,13 @@ document.body.onkeyup = function(e) {
 
 const colors = window.location.search.slice(8).split("-");
 
-console.log(colors);
-window.onload = generate;
+window.onload = function() {
+  color1 = colors[0];
+  color2 = colors[1];
+  color3 = colors[2];
+  color4 = colors[3];
+  color5 = colors[4];
+
+  generateColor();
+  changeURL();
+};
