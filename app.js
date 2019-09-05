@@ -24,8 +24,6 @@ const hex5 = document.getElementById("displayHex5");
 const column5 = document.getElementById("color5");
 const check5 = document.getElementById("lock5");
 
-const linkText = window.location.href;
-
 // This checks for locked colors and generates new available ones
 function generateColor() {
   if (check1.checked != true) {
@@ -100,7 +98,7 @@ document.body.onkeyup = function(e) {
     changeURL();
   }
 };
-
+const linkText = window.location.href;
 window.onload = generate;
 
 /* 
