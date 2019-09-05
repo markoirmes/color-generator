@@ -41,7 +41,7 @@ function getColor() {
       .toString(16)
       .slice(2, 8);
     column2.setAttribute("style", `background-color:#` + `${color2}`);
-    hex2.innerHTML = `#` + `${color2}`;
+    hex2.innerHTML = `${color2}`;
   } else {
     //do nothing...
   }
