@@ -146,8 +146,11 @@ function generate() {
 
 // Generate colors using SPACEBAR
 const box = document.querySelectorAll(".checkbox");
+
 document.body.onkeyup = function(e) {
-  if (e.keyCode == 32 && box.hasFocus()) {
+  if (e.keyCode == 32 && box.hasFocus() == true) {
+    event.preventDefault();
+  } else {
     generateColor();
     changeURL();
   }
