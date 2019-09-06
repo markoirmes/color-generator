@@ -145,12 +145,25 @@ function generate() {
 }
 
 // Generate colors using SPACEBAR
+
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
+    document.querySelectorAll(".checkbox").addEventListener(
+      "change",
+      function(event) {
+        event.preventDefault();
+      },
+      false
+    );
+
     generateColor();
     changeURL();
   }
 };
+
+document
+  .querySelectorAll(".checkbox")
+  .addEventListener("onclick", changePadlock(), false);
 
 const colors = window.location.search.slice(8).split("-");
 
