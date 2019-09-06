@@ -148,9 +148,12 @@ function generate() {
 const box = document.querySelectorAll(".checkbox");
 
 document.body.onkeypress = function(e) {
-  if (e.keyCode == 32 && box.hasFocus() == true) {
-    e.preventDefault();
-  } else {
+  if (e.keyCode == 32) {
+    document
+      .querySelectorAll(".checkbox")
+      .addEventListener("click", function(event) {
+        event.preventDefault();
+      });
     generateColor();
     changeURL();
   }
