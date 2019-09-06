@@ -148,7 +148,7 @@ function generate() {
 const box = document.querySelectorAll(".checkbox");
 
 document.body.onkeyup = function(e) {
-  if (e.keyCode == 32 && box.hasFocus() != true) {
+  if (e.keyCode == 32 && box.hasFocus() == true) {
     e.preventDefault();
   } else {
     generateColor();
