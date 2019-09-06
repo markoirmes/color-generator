@@ -144,13 +144,13 @@ function generate() {
   changeURL();
 }
 
-// Generate colors using SPACEBAR
+/* Generate colors using SPACEBAR
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
     generateColor();
     changeURL();
   }
-};
+}; */
 
 const colors = window.location.search.slice(8).split("-");
 
