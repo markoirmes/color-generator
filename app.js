@@ -148,13 +148,9 @@ function generate() {
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32) {
-    document.querySelectorAll(".checkbox").addEventListener(
-      "change",
-      function(event) {
-        event.preventDefault();
-      },
-      false
-    );
+    document
+      .querySelectorAll(".checkbox")
+      .addEventListener("change", preventDefault(), false);
 
     generateColor();
     changeURL();
@@ -163,7 +159,7 @@ document.body.onkeyup = function(e) {
 
 document
   .querySelectorAll(".checkbox")
-  .addEventListener("onclick", changePadlock(), false);
+  .addEventListener("onchange", changePadlock(), false);
 
 const colors = window.location.search.slice(8).split("-");
 
