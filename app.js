@@ -148,8 +148,8 @@ function generate() {
 const box = document.querySelectorAll(".checkbox");
 
 document.body.onkeyup = function(e) {
-  if (e.keyCode == 32 && box.hasFocus() == true) {
-    e.keyCode.preventDefault();
+  if (e.keyCode == 32 && box.hasFocus() != true) {
+    e.preventDefault();
   } else {
     generateColor();
     changeURL();
