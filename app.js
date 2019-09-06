@@ -149,7 +149,7 @@ const box = document.querySelectorAll(".checkbox");
 
 document.body.onkeyup = function(e) {
   if (e.keyCode == 32 && box.hasFocus() == true) {
-    event.preventDefault();
+    e.keyCode.preventDefault();
   } else {
     generateColor();
     changeURL();
